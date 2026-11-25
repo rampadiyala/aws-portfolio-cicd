@@ -4,7 +4,7 @@ A portfolio page with a GitHub Actions workflow for deployment to AWS.
 
 ## Features
 
-- Syncs `site/` to S3 on push to main
+- Syncs `site/` to S3 when the workflow is run manually
 - Refreshes the CloudFront cache
 - Uses an IAM role through OIDC
 
@@ -22,7 +22,7 @@ Preview: `npm start` (needs Python 3), then open http://localhost:8000.
 2. Create a CloudFront distribution with Origin Access Control and default root object `index.html`.
 3. Add GitHub as an IAM OIDC provider. Create a role limited to this repository's main branch, allowing s3:ListBucket, s3:PutObject and s3:DeleteObject on the bucket, and cloudfront:CreateInvalidation on the distribution.
 4. In GitHub, add the secret `AWS_ROLE_ARN` and variables `AWS_REGION`, `BUCKET`, `DISTRIBUTION_ID`.
-5. Push to main or re-run the workflow.
+5. Open **Actions > Deploy site > Run workflow** and select the main branch.
 
 ## Project files
 
