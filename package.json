@@ -1,0 +1,11 @@
+{
+  "name": "aws-portfolio-cicd",
+  "version": "1.0.0",
+  "description": "A portfolio page with a GitHub Actions workflow for deployment to AWS.",
+  "private": true,
+  "license": "MIT",
+  "author": "Seetharam Padiyala",
+  "scripts": {
+    "start": "python3 -m http.server 8000 --directory site"
+  }
+}
